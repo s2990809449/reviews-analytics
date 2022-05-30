@@ -32,3 +32,17 @@ for d in data:
 		good.append(d)
 print('一共有', len(good), '筆留言有good')
 print(good[0])
+
+# list comprehension(清單快寫法)
+good = [d for d in data if 'good' in d]
+# output = [(運算) for (變數) in (清單) if 篩選條件]
+print('一共有', len(good), '筆留言有good')
+
+bad = ['bad' in d for d in data]
+# 'bad' in d 是是非題
+print(bad)
+
+# 也可以寫成這樣
+bad = []
+for d in data:
+	bad.append('bad' in d)
